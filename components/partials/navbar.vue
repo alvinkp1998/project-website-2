@@ -7,13 +7,13 @@
         class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
       >
         <a class="navbar-brand brand-logo" href="index.html"
-          ><img src="images/logo.svg" alt="logo"
+          ><img src="images/fs.png" alt="logo"
         /></a>
         <a class="navbar-brand brand-logo-mini" href="index.html"
-          ><img src="images/logo-mini.svg" alt="logo"
+          ><img src="images/fs-mini.png" alt="logo"
         /></a>
       </div>
-      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+      <div class="navbar-menu-wrapper d-flex align-items-stretch bg">
         <div class="search-field d-none d-md-block">
           <form class="d-flex align-items-center h-100" action="#">
             <div class="input-group">
