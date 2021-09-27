@@ -12,55 +12,32 @@ export default {
       { name: "format-detection", content: "telephone=no" }
     ],
     link: [
+      { rel: "shortcut icon", href: "images/favicon.png" },
       {
-        rel: "icon",
-        type: "image/x-icon",
-        href: "/favicon.ico"
+        rel: "stylesheet",
+        href: "vendors/iconfonts/mdi/css/materialdesignicons.min.css"
+      },
+      {
+        rel: "stylesheet",
+        href: "vendors/css/vendor.bundle.base.css"
       },
       {
         rel: "stylesheet",
         type: "text/css",
+        href: "css/style.css"
+      },
+      {
+        rel: "stylesheet",
         href:
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "/assets/css/style.css"
-      },
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "/assets/css/components.css"
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
       }
     ],
     script: [
-      {
-        src: "https://code.jquery.com/jquery-3.3.1.min.js"
-      },
-      {
-        src:
-          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      },
-      {
-        src:
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      },
-      {
-        src:
-          "https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"
-      },
-      {
-        src: "/assets/js/stisla.js"
-      },
-      {
-        src: "/assets/js/scripts.js"
-      }
+      { src: "vendors/js/vendor.bundle.base.js" },
+      { src: "vendors/js/vendor.bundle.addons.js" },
+      { src: "js/off-canvas.js" },
+      { src: "js/misc.js" },
+      { src: "js/dashboard.js" }
     ]
   },
 
