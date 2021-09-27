@@ -1,12 +1,7 @@
 <template>
   <div>
-    <div class="card shadow" style="width: 21rem;">
-      <img
-        height="200px"
-        class="card-img-top"
-        :src="img"
-        alt="Card image cap"
-      />
+    <div class="card shadow">
+      <img class="card-img-top" :src="img" alt="Card image cap" />
       <div class="card-body">
         <h5 class="card-title text-center">{{ name }}</h5>
       </div>
