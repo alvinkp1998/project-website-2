@@ -16015,7 +16015,7 @@ button.bg-dark:focus {
 .template-demo > .btn,
 .template-demo > .btn-toolbar,
 .mx-3 {
-  margin-right: 1rem !important;
+  margin-right: 0.5rem !important;
 }
 
 .mb-3,

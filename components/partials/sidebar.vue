@@ -37,7 +37,7 @@ export default {
         {
           name: "Semua Kelas",
           icon: "fas fa-chalkboard menu-icon",
-          to: "/"
+          to: "/list-class"
         }
       ]
     };
