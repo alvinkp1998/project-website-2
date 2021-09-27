@@ -1,31 +1,25 @@
 <template>
-  <div>
-    <nav class="sidebar sidebar-offcanvas" id="sidebar">
-      <ul class="nav">
-        <li class="nav-item nav-profile">
-          <a href="#" class="nav-link">
-            <div class="nav-profile-image">
-              <img src="images/faces/face1.jpg" alt="profile" />
-              <span class="login-status online"></span>
-              <!--change to offline or busy as needed-->
-            </div>
-            <div class="nav-profile-text d-flex flex-column">
-              <span class="font-weight-bold mb-2">David Grey. H</span>
-              <span class="text-secondary text-small">Project Manager</span>
-            </div>
-            <i
-              class="mdi mdi-bookmark-check text-success nav-profile-badge"
-            ></i>
-          </a>
-        </li>
-        <li class="nav-item" v-for="(menu, i) in listSidebar" :key="i">
+  <div class="main-sidebar">
+    <aside id="sidebar-wrapper">
+      <div class="sidebar-brand">
+        <a href="index.html">Stisla</a>
+      </div>
+      <div class="sidebar-brand sidebar-brand-sm">
+        <a href="index.html">St</a>
+      </div>
+      <ul class="sidebar-menu">
+        <li v-for="(menu, i) in listMenu" :key="i">
           <nuxt-link class="nav-link" :to="menu.to">
-            <span class="menu-title pl-2">{{ menu.name }}</span>
-            <i :class="menu.icon"></i>
+            <i :class="menu.icon"></i> <span>{{ menu.name }} </span>
           </nuxt-link>
         </li>
+        <!-- <li v-for="(item,i) in listClass" :key="i">
+          <nuxt-link class="nav-link" to="/example/http-request/">
+            <i class="far fa-bookmark"></i> <span>{{item.name}} </span>
+          </nuxt-link>
+        </li> -->
       </ul>
-    </nav>
+    </aside>
   </div>
 </template>
 
@@ -33,10 +27,10 @@
 export default {
   data() {
     return {
-      listSidebar: [
+      listMenu: [
         {
           name: "Semua Kelas",
-          icon: "fas fa-chalkboard menu-icon",
+          icon: "fas fa-home",
           to: "/"
         }
       ]
