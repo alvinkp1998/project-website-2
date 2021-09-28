@@ -1,7 +1,20 @@
 <template>
   <div>
+    <div class="d-flex justify-content-around align-items-center flex-wrap">
+      <button class="btn btn-primary pill">Lihat Kelas</button>
+      <a
+        type="button"
+        class="btn btn-secondary btn-sm mt-1"
+        data-toggle="modal"
+        data-target="#kelas"
+      >
+        Detail Kelas
+      </a>
+    </div>
+
     <div
-      class="modal fade bd-example-modal-lg"
+      id="kelas"
+      class="modal fade"
       tabindex="-1"
       role="dialog"
       aria-labelledby="myLargeModalLabel"
@@ -21,41 +34,76 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-md-6">
-                <img :src="img" alt="kelas" class="ml-5" />
+              <div class="col-lg-6 text-center">
+                <img :src="img" alt="kelas" />
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <h4>{{ name }}</h4>
-                <button
-                  @click="showText = !showText"
-                  class="btn btn-primary btn-sm shadow-sm"
+                <ul
+                  class="nav nav-pills pt-2 mb-3"
+                  id="pills-tab"
+                  role="tablist"
                 >
-                  Deskripsi
-                </button>
-                <span class="text-primary ml-2">Jadwal</span>
-                <button
-                  @click="showText = !showText"
-                  class="btn btn-primary btn-sm shadow-sm"
-                >
-                  jadwal
-                </button>
-                <p v-show="showText" class="mt-3">{{ desc }}</p>
-                <div class="mt-3" v-show="!showText">
-                  <p>Mulai : 19 Agustus 2021</p>
-                  <p>Selesai : 19 November 2021</p>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      :id="`pills-${namaKelas}-desc-tabs`"
+                      data-toggle="pill"
+                      :href="`#pills-${namaKelas}-desc`"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                      >Deskripsi</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      :id="`pilsl-${namaKelas}-jadwal-tabs`"
+                      data-toggle="pill"
+                      :href="`#pills-${namaKelas}-jadwal`"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                      >Jadwal</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    :id="`pills-${namaKelas}-desc`"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                  >
+                    <p class="mt-3 line-height">{{ desc }}</p>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    :id="`pills-${namaKelas}-jadwal`"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                  >
+                    <div class="mt-3">
+                      <p>Mulai : 19 Agustus 2021</p>
+                      <p>Selesai : 19 November 2021</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Tutup
-            </button>
-            <button type="button" class="btn btn-primary">Lihat Kelas</button>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary pill"
+                data-dismiss="modal"
+              >
+                Tutup
+              </button>
+              <button type="button" class="btn btn-primary pill">
+                Lihat Kelas
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -70,10 +118,10 @@ export default {
     name: { type: String },
     desc: { type: String }
   },
-  data() {
-    return {
-      showText: true
-    };
+  computed: {
+    namaKelas() {
+      return this.name.replace(/ /g, "");
+    }
   }
 };
 </script>
@@ -82,5 +130,13 @@ export default {
 .large {
   margin-top: 100px;
   width: 1000px;
+}
+.pill {
+  border-radius: 30px;
+}
+.line-height {
+  margin-right: 20px;
+  text-align: justify;
+  line-height: 25px;
 }
 </style>
