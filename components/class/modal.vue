@@ -134,14 +134,14 @@ export default {
     desc: { type: String }
   },
   computed: {
-    namaKelas() {
+    id() {
       return this.name.toLowerCase().replace(/ /g, "-");
     }
   },
   methods: {
     redirectClass() {
-      $("#kelas").modal("hide");
-      this.$router.push(`${this.namaKelas}`);
+      $(".modal").modal("hide");
+      this.$router.push(`${this.id}`);
     }
   }
 };
