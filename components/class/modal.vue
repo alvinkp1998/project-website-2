@@ -134,13 +134,13 @@ export default {
   },
   computed: {
     namaKelas() {
-      return this.name.replace(/ /g, "");
+      return this.name.toLowerCase().replace(/ /g, "-");
     }
   },
   methods: {
     redirectClass() {
       $("#kelas").modal("hide");
-      this.$router.push(`detail-class/class`);
+      this.$router.push(`${this.namaKelas}`);
     }
   }
 };
