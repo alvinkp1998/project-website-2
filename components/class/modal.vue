@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="d-flex justify-content-around align-items-center flex-wrap">
-      <button class="btn btn-primary pill">Lihat Kelas</button>
+      <button class="btn btn-primary btn-sm pill">Lihat Kelas</button>
       <a
         type="button"
-        class="btn btn-secondary btn-sm mt-1"
+        class="btn btn-secondary btn-sm pill mt-1"
         data-toggle="modal"
-        data-target="#kelas"
+        :data-target="`#${id}`"
       >
         Detail Kelas
       </a>
     </div>
 
     <div
-      id="kelas"
+      :id="`${id}`"
       class="modal fade"
       tabindex="-1"
       role="dialog"
@@ -84,10 +84,18 @@
                     role="tabpanel"
                     aria-labelledby="pills-profile-tab"
                   >
-                    <div class="mt-3">
-                      <p>Mulai : 19 Agustus 2021</p>
-                      <p>Selesai : 19 November 2021</p>
-                    </div>
+                    <table class="mt-3">
+                      <tbody>
+                        <tr>
+                          <td class="pb-2" width="80">Mulai :</td>
+                          <td class="pb-2">15 Agustus 2021</td>
+                        </tr>
+                        <tr>
+                          <td>Selesai :</td>
+                          <td>27 November 2021</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -114,12 +122,13 @@
 <script>
 export default {
   props: {
+    id: { type: Number },
     img: { type: String },
     name: { type: String },
     desc: { type: String }
   },
   computed: {
-    namaKelas() {
+    id() {
       return this.name.replace(/ /g, "");
     }
   }
@@ -137,6 +146,6 @@ export default {
 .line-height {
   margin-right: 20px;
   text-align: justify;
-  line-height: 25px;
+  line-height: 23px;
 }
 </style>

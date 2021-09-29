@@ -1,17 +1,20 @@
 <template>
   <div>
-    <div class="card shadow">
-      <img
-        class="card-img-top gambar"
-        :src="img"
-        alt="Card image cap"
-        width="100%"
-        height="170px"
-      />
+    <div class="card shadow-lg">
+      <div class="text-center">
+        <img
+          class="card-img-top gambar "
+          :src="img"
+          alt="Card image cap"
+          width="100%"
+          height="170px"
+        />
+      </div>
+
       <div class="card-body">
         <h5 class="card-text text text-center">{{ name }}</h5>
       </div>
-      <class-modal :img="img" :name="name" :desc="desc" />
+      <class-modal :id="id" :img="img" :name="name" :desc="desc" />
     </div>
   </div>
 </template>

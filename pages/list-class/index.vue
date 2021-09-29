@@ -1,8 +1,17 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-md-3" v-for="item in listClass" :key="item.id">
-        <class-item :name="item.name" :desc="item.desc" :img="item.img" />
+    <div class="row ">
+      <div
+        class="col-lg-3 col-md-6 margintop"
+        v-for="item in listClass"
+        :key="item.id"
+      >
+        <class-item
+          :id="item.id"
+          :name="item.name"
+          :desc="item.desc"
+          :img="item.img"
+        />
       </div>
     </div>
   </div>
@@ -46,3 +55,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+@media screen and (max-width: 992px) {
+  .margintop {
+    margin-top: 50px;
+  }
+}
+</style>
