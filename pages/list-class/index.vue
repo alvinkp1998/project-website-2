@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-md-3" v-for="item in listClass" :key="item.id">
+    <div class="row ">
+      <div
+        class="col-lg-3 col-md-6 pad"
+        v-for="item in listClass"
+        :key="item.id"
+      >
         <class-item :name="item.name" :desc="item.desc" :img="item.img" />
       </div>
     </div>
@@ -46,3 +50,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+@media screen and (max-width: 992px) {
+  .pad {
+    margin-top: 50px;
+  }
+}
+</style>
