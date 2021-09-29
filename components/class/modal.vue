@@ -6,14 +6,14 @@
         type="button"
         class="btn btn-secondary btn-sm pill mt-1"
         data-toggle="modal"
-        data-target="#kelas"
+        :data-target="`#${id}`"
       >
         Detail Kelas
       </a>
     </div>
 
     <div
-      id="kelas"
+      :id="`${id}`"
       class="modal fade"
       tabindex="-1"
       role="dialog"
@@ -122,12 +122,13 @@
 <script>
 export default {
   props: {
+    id: { type: Number },
     img: { type: String },
     name: { type: String },
     desc: { type: String }
   },
   computed: {
-    namaKelas() {
+    id() {
       return this.name.replace(/ /g, "");
     }
   }

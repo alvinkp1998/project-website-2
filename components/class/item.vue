@@ -14,7 +14,7 @@
       <div class="card-body">
         <h5 class="card-text text text-center">{{ name }}</h5>
       </div>
-      <class-modal :img="img" :name="name" :desc="desc" />
+      <class-modal :id="id" :img="img" :name="name" :desc="desc" />
     </div>
   </div>
 </template>
