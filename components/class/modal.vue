@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="d-flex justify-content-around align-items-center flex-wrap">
-      <button class="btn btn-primary btn-sm pill">Lihat Kelas</button>
+      <button @click="redirectClass" class="btn btn-primary btn-sm pill">
+        Lihat Kelas
+      </button>
       <a
         type="button"
         class="btn btn-secondary btn-sm pill mt-1"
@@ -108,7 +110,11 @@
               >
                 Tutup
               </button>
-              <button type="button" class="btn btn-primary pill">
+              <button
+                @click="redirectClass"
+                type="button"
+                class="btn btn-primary pill"
+              >
                 Lihat Kelas
               </button>
             </div>
@@ -129,6 +135,12 @@ export default {
   computed: {
     namaKelas() {
       return this.name.replace(/ /g, "");
+    }
+  },
+  methods: {
+    redirectClass() {
+      $("#kelas").modal("hide");
+      this.$router.push(`detail-class/class`);
     }
   }
 };

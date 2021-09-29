@@ -23,7 +23,7 @@
               <input
                 type="text"
                 class="form-control bg-transparent border-0"
-                placeholder="Search projects"
+                placeholder="Search class"
               />
             </div>
           </form>
