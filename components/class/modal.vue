@@ -37,7 +37,7 @@
           <div class="modal-body">
             <div class="row">
               <div class="col-lg-6 text-center">
-                <img :src="img" alt="kelas" />
+                <img :src="img" :alt="namaKelas" width="400px" height="300px" />
               </div>
               <div class="col-lg-6">
                 <h4>{{ name }}</h4>

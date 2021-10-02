@@ -32,20 +32,20 @@ export default {
         },
         {
           id: 2,
-          name: "Mastery Node.js",
+          name: "Mastery NodeJs",
           desc: "Ini kelas Node.js",
           img:
             "https://static.cdn-cdpl.com/source/998b78e349061b4971c0a2b0e8d6be41/nodejs-frameworks.png"
         },
         {
           id: 3,
-          name: "Mastery Vue.js",
+          name: "Mastery VueJs",
           desc: "Ini kelas Vue.js",
           img: "https://miro.medium.com/max/1400/1*wFL3csJ96lQpY0IVT9SE3w.jpeg"
         },
         {
           id: 4,
-          name: "Mastery Angular.js",
+          name: "Mastery AngularJs",
           desc: "Ini kelas Angular.js",
           img:
             "http://redaksi.pens.ac.id/wp-content/uploads/2021/01/Reasons-to-Choose-AngularJS.png"
