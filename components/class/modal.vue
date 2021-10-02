@@ -8,14 +8,14 @@
         type="button"
         class="btn btn-secondary btn-sm pill mt-1"
         data-toggle="modal"
-        :data-target="`#${id}`"
+        :data-target="`#${namaKelas}`"
       >
         Detail Kelas
       </a>
     </div>
 
     <div
-      :id="`${id}`"
+      :id="`${namaKelas}`"
       class="modal fade"
       tabindex="-1"
       role="dialog"
@@ -134,14 +134,14 @@ export default {
     desc: { type: String }
   },
   computed: {
-    id() {
+    namaKelas() {
       return this.name.toLowerCase().replace(/ /g, "-");
     }
   },
   methods: {
     redirectClass() {
       $(".modal").modal("hide");
-      this.$router.push(`${this.id}/kelas`);
+      this.$router.push(`${this.namaKelas}/kelas`);
     }
   }
 };

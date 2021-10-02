@@ -23,14 +23,9 @@
 export default {
   props: {
     id: { type: Number },
-    name: { type: String, default: "" },
-    desc: { type: String, default: "" },
-    img: { type: String, default: "" }
-  },
-  computed: {
-    namaKelas() {
-      return this.name.replace(/ /g, "");
-    }
+    name: { type: String },
+    desc: { type: String },
+    img: { type: String }
   }
 };
 </script>

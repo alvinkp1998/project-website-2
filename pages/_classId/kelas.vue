@@ -10,7 +10,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-1 mr-4">
-              <img src="favicon.ico" width="40px" height="100%" alt="materi" />
+              <img src="/favicon.ico" width="40px" height="100%" alt="materi" />
             </div>
             <div class="col vertical-line">
               <h4>judul Jadwal - Materi</h4>
@@ -27,6 +27,10 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {};
+</script>
 
 <style scoped>
 .jumbotron {
