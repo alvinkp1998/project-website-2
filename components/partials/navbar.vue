@@ -29,6 +29,29 @@
           </form>
         </div>
         <ul class="navbar-nav navbar-nav-right">
+          <ul v-if="$route.params.classId" class="navbar-nav text-black mr-5 ">
+            <li class="nav-item border-right border-left ">
+              <nuxt-link
+                class="nav-link"
+                :to="`/${$route.params.classId}/kelas`"
+                >Kelas</nuxt-link
+              >
+            </li>
+            <li class="nav-item border-right">
+              <nuxt-link
+                class="nav-link"
+                :to="`/${$route.params.classId}/jadwal`"
+                >Jadwal</nuxt-link
+              >
+            </li>
+            <li class="nav-item border-right">
+              <nuxt-link
+                class="nav-link"
+                :to="`/${$route.params.classId}/anggota`"
+                >Anggota</nuxt-link
+              >
+            </li>
+          </ul>
           <li class="nav-item nav-profile dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -240,3 +263,9 @@
     </nav>
   </div>
 </template>
+
+<style scoped>
+.text-black {
+  color: black;
+}
+</style>

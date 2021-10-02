@@ -141,7 +141,7 @@ export default {
   methods: {
     redirectClass() {
       $(".modal").modal("hide");
-      this.$router.push(`${this.id}`);
+      this.$router.push(`${this.id}/kelas`);
     }
   }
 };
