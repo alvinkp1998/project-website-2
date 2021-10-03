@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="d-flex justify-content-around align-items-center flex-wrap">
-      <button @click="redirectClass" class="btn btn-primary btn-sm pill">
-        Lihat Kelas
+      <button @click="redirectClass" class="btn btn-primary btn-sm pill arrow">
+        <span>Lihat Kelas</span>
       </button>
       <a
         type="button"
-        class="btn btn-secondary btn-sm pill mt-1"
+        class="btn btn-secondary pill btn-sm mt-1 arrow"
         data-toggle="modal"
         :data-target="`#${namaKelas}`"
       >
-        Detail Kelas
+        <span>Detail Kelas</span>
       </a>
     </div>
 
@@ -159,5 +159,37 @@ export default {
   margin-right: 20px;
   text-align: justify;
   line-height: 23px;
+}
+
+.btn {
+  padding: 7px 20px 7px 20px;
+}
+span {
+  font-size: 0.9em;
+}
+
+.arrow span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.arrow span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.arrow:hover span {
+  padding-right: 15px;
+}
+
+.arrow:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 </style>

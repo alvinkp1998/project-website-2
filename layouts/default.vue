@@ -12,12 +12,19 @@
           <div class="content-wrapper">
             <div class="page-header">
               <h3 class="page-title">
-                <span
-                  class="page-title-icon bg-gradient-primary text-white mr-2"
-                >
-                  <i class="mdi mdi-home"></i>
-                </span>
+                <nuxt-link to="/list-class">
+                  <span
+                    class="page-title-icon bg-gradient-primary text-white mr-2"
+                  >
+                    <i class="mdi mdi-home"></i>
+                  </span>
+                </nuxt-link>
                 Fullstack Academy
+                <span
+                  style="text-transform: capitalize"
+                  v-if="$route.params.classId"
+                  >{{ "/ " + forTitle }}</span
+                >
               </h3>
             </div>
             <div class="card">
@@ -38,6 +45,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    forTitle() {
+      return this.$route.params.classId.replace(/-/g, " ");
+    }
+  }
+};
+</script>
 <style scoped>
 .card {
   border-radius: 20px;

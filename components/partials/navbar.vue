@@ -6,12 +6,12 @@
       <div
         class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
       >
-        <a class="navbar-brand brand-logo" href="index.html"
+        <nuxt-link class="navbar-brand brand-logo" to="/"
           ><img src="images/fs.png" alt="logo"
-        /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"
+        /></nuxt-link>
+        <nuxt-link class="navbar-brand brand-logo-mini" to="/"
           ><img src="images/fs-mini.png" alt="logo"
-        /></a>
+        /></nuxt-link>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-stretch bg">
         <div class="search-field d-none d-md-block">
