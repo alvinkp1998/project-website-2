@@ -38,15 +38,17 @@
           </a>
         </div>
         <div class="text-center">
-          <button class="btn btn-secondary btn-sm mt-3">
-            Tambah Jadwal
-          </button>
+          <nuxt-link :to="`/${$route.params.classId}/jadwal/add`"
+            ><button class="btn btn-primary badge-pill btn-sm mt-3">
+              <span style="font-size:14px; padding:10px">Tambah Jadwal</span>
+            </button></nuxt-link
+          >
         </div>
       </div>
       <div class="col-md-9">
         <div class="text-center">
-          <button class="btn btn-secondary btn-sm mt-3">
-            Tambah Materi
+          <button class="btn btn-primary badge-pill  btn-sm mt-3">
+            <span style="font-size:14px; padding:10px">Tambah Materi</span>
           </button>
         </div>
       </div>
@@ -65,3 +67,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.pill {
+  border-radius: 10px;
+}
+</style>
