@@ -25,6 +25,86 @@
         </div>
       </div>
     </div>
+    <div class="container materi mt-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-1 mr-4">
+              <img src="/favicon.ico" width="40px" height="100%" alt="materi" />
+            </div>
+            <div class="col vertical-line">
+              <h4>judul Jadwal - Materi</h4>
+              <h5>30 Agustus 2021</h5>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <span class="pointer">
+                <i class="fas fa-ellipsis-v"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container materi mt-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-1 mr-4">
+              <img src="/favicon.ico" width="40px" height="100%" alt="materi" />
+            </div>
+            <div class="col vertical-line">
+              <h4>judul Jadwal - Materi</h4>
+              <h5>30 Agustus 2021</h5>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <span class="pointer">
+                <i class="fas fa-ellipsis-v"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container materi mt-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-1 mr-4">
+              <img src="/favicon.ico" width="40px" height="100%" alt="materi" />
+            </div>
+            <div class="col vertical-line">
+              <h4>judul Jadwal - Materi</h4>
+              <h5>30 Agustus 2021</h5>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <span class="pointer">
+                <i class="fas fa-ellipsis-v"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container materi mt-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-1 mr-4">
+              <img src="/favicon.ico" width="40px" height="100%" alt="materi" />
+            </div>
+            <div class="col vertical-line">
+              <h4>judul Jadwal - Materi</h4>
+              <h5>30 Agustus 2021</h5>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <span class="pointer">
+                <i class="fas fa-ellipsis-v"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

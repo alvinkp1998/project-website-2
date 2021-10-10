@@ -38,6 +38,16 @@ export default {
           name: "Semua Kelas",
           icon: "fas fa-chalkboard menu-icon",
           to: "/list-class"
+        },
+        {
+          name: "Kelasku",
+          icon: "fas fa-book-open menu-icon",
+          to: "/list-class"
+        },
+        {
+          name: "Presensi",
+          icon: "far fa-check-square menu-icon",
+          to: "/list-class"
         }
       ]
     };
