@@ -38,7 +38,7 @@
           </a>
         </div>
         <div class="text-center">
-          <nuxt-link :to="`/${$route.params.classId}/jadwal/add`"
+          <nuxt-link :to="`/${$route.params.classId}/jadwal/add-jadwal`"
             ><button class="btn btn-primary badge-pill btn-sm mt-3">
               <span style="font-size:14px; padding:10px">Tambah Jadwal</span>
             </button></nuxt-link
@@ -47,9 +47,11 @@
       </div>
       <div class="col-md-9">
         <div class="text-center">
-          <button class="btn btn-primary badge-pill  btn-sm mt-3">
-            <span style="font-size:14px; padding:10px">Tambah Materi</span>
-          </button>
+          <nuxt-link :to="`/${$route.params.classId}/jadwal/add-materi`">
+            <button class="btn btn-primary badge-pill  btn-sm mt-3">
+              <span style="font-size:14px; padding:10px">Tambah Materi</span>
+            </button></nuxt-link
+          >
         </div>
       </div>
     </div>

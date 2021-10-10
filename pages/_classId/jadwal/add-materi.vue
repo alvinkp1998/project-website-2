@@ -13,7 +13,7 @@
         <form @submit.prevent="submit">
           <div class="row my-3">
             <div class="col-md-3 d-flex align-items-center">
-              <label class="text-capitalize h6">Nama Jadwal</label>
+              <label class="text-capitalize h6">Materi</label>
             </div>
             <div class="col-md-9">
               <input type="text" v-model="data" class="form-control" />
@@ -21,18 +21,32 @@
           </div>
           <div class="row my-3">
             <div class="col-md-3 d-flex align-items-center">
-              <label class="text-capitalize h6">Waktu Mulai</label>
+              <label class="text-capitalize h6">Tipe</label>
             </div>
             <div class="col-md-9">
-              <input type="date" v-model="data" class="form-control" />
+              <select class="custom-select" id="inputGroupSelect01">
+                <option selected>-Pilih salah satu-</option>
+                <option value="1">Power Point</option>
+                <option value="2">PDF</option>
+                <option value="3">Video</option>
+              </select>
             </div>
           </div>
           <div class="row my-3">
             <div class="col-md-3 d-flex align-items-center">
-              <label class="text-capitalize h6">Waktu Selesai </label>
+              <label class="text-capitalize h6">File </label>
             </div>
             <div class="col-md-9">
-              <input type="date" v-model="data" class="form-control" />
+              <div class="custom-file">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="inputGroupFile02"
+                />
+                <label class="custom-file-label" for="inputGroupFile02"
+                  >Choose file</label
+                >
+              </div>
             </div>
           </div>
           <div class="text-right mt-4">
@@ -43,7 +57,7 @@
             >
               Batal
             </button>
-            <button class="btn btn-primary" type="submit">Simpan</button>
+            <button class="btn btn-primary" type="submit">Tambah</button>
           </div>
         </form>
       </div>
