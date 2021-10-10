@@ -5,6 +5,7 @@
         <h1 class="display-4 text-center">{{ forTitle }}</h1>
       </div>
     </div>
+
     <div class="container materi">
       <div class="card shadow-sm">
         <div class="card-body">
@@ -16,10 +17,16 @@
               <h4>judul Jadwal - Materi</h4>
               <h5>30 Agustus 2021</h5>
             </div>
-            <div class="col-1 d-flex align-items-center">
-              <span class="pointer">
-                <i class="fas fa-ellipsis-v"></i>
-              </span>
+            <div class="col-1 d-flex align-items-center ">
+              <i
+                class="fas fa-ellipsis-v"
+                data-toggle="dropdown"
+                style="font-size:1.4em"
+              ></i>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sunting</a>
+                <a class="dropdown-item" href="#">Hapus</a>
+              </div>
             </div>
           </div>
         </div>
@@ -36,10 +43,16 @@
               <h4>judul Jadwal - Materi</h4>
               <h5>30 Agustus 2021</h5>
             </div>
-            <div class="col-1 d-flex align-items-center">
-              <span class="pointer">
-                <i class="fas fa-ellipsis-v"></i>
-              </span>
+            <div class="col-1 d-flex align-items-center ">
+              <i
+                class="fas fa-ellipsis-v"
+                data-toggle="dropdown"
+                style="font-size:1.4em"
+              ></i>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sunting</a>
+                <a class="dropdown-item" href="#">Hapus</a>
+              </div>
             </div>
           </div>
         </div>
@@ -56,10 +69,16 @@
               <h4>judul Jadwal - Materi</h4>
               <h5>30 Agustus 2021</h5>
             </div>
-            <div class="col-1 d-flex align-items-center">
-              <span class="pointer">
-                <i class="fas fa-ellipsis-v"></i>
-              </span>
+            <div class="col-1 d-flex align-items-center ">
+              <i
+                class="fas fa-ellipsis-v"
+                data-toggle="dropdown"
+                style="font-size:1.4em"
+              ></i>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sunting</a>
+                <a class="dropdown-item" href="#">Hapus</a>
+              </div>
             </div>
           </div>
         </div>
@@ -76,10 +95,16 @@
               <h4>judul Jadwal - Materi</h4>
               <h5>30 Agustus 2021</h5>
             </div>
-            <div class="col-1 d-flex align-items-center">
-              <span class="pointer">
-                <i class="fas fa-ellipsis-v"></i>
-              </span>
+            <div class="col-1 d-flex align-items-center ">
+              <i
+                class="fas fa-ellipsis-v"
+                data-toggle="dropdown"
+                style="font-size:1.4em"
+              ></i>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sunting</a>
+                <a class="dropdown-item" href="#">Hapus</a>
+              </div>
             </div>
           </div>
         </div>
@@ -96,10 +121,16 @@
               <h4>judul Jadwal - Materi</h4>
               <h5>30 Agustus 2021</h5>
             </div>
-            <div class="col-1 d-flex align-items-center">
-              <span class="pointer">
-                <i class="fas fa-ellipsis-v"></i>
-              </span>
+            <div class="col-1 d-flex align-items-center ">
+              <i
+                class="fas fa-ellipsis-v"
+                data-toggle="dropdown"
+                style="font-size:1.4em"
+              ></i>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sunting</a>
+                <a class="dropdown-item" href="#">Hapus</a>
+              </div>
             </div>
           </div>
         </div>
