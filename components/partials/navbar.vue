@@ -61,11 +61,11 @@
               aria-expanded="false"
             >
               <div class="nav-profile-img">
-                <img src="images/faces/face1.jpg" alt="image" />
+                <img src="images/fotoku.jpg" alt="image" />
                 <span class="availability-status online"></span>
               </div>
               <div class="nav-profile-text">
-                <p class="mb-1 text-black">David Greymaax</p>
+                <p class="mb-1 text-black">Alvin Kusuma</p>
               </div>
             </a>
             <div
