@@ -1,9 +1,6 @@
 <template>
   <div>
     <div class="d-flex justify-content-around align-items-center flex-wrap">
-      <button @click="redirectClass" class="btn btn-primary btn-sm pill arrow">
-        <span>Lihat Kelas</span>
-      </button>
       <a
         type="button"
         class="btn btn-secondary pill btn-sm mt-1 arrow"
@@ -12,6 +9,9 @@
       >
         <span>Detail Kelas</span>
       </a>
+      <button @click="confirmGabung" class="btn btn-primary btn-sm pill arrow">
+        <span>Gabung kelas</span>
+      </button>
     </div>
 
     <div
@@ -111,11 +111,11 @@
                 Tutup
               </button>
               <button
-                @click="redirectClass"
+                @click="confirmGabung"
                 type="button"
                 class="btn btn-primary pill"
               >
-                Lihat Kelas
+                Gabung kelas
               </button>
             </div>
           </div>
@@ -142,6 +142,25 @@ export default {
     redirectClass() {
       $(".modal").modal("hide");
       this.$router.push(`${this.namaKelas}/kelas`);
+    },
+    confirmGabung() {
+      this.$swal({
+        title: "Apakah kamu yakin?",
+        text: `Ingin bergabung dengan kelas ${this.namaKelas}.`,
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Ya, bergabung"
+      }).then(result => {
+        if (result.isConfirmed) {
+          this.$swal(
+            "Berhasil!",
+            `Kamu berhasil bergabung dengan kelas ${this.namaKelas}.`,
+            "success"
+          );
+        }
+      });
     }
   }
 };
