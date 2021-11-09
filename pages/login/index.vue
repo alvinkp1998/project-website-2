@@ -27,7 +27,9 @@
               Log in
             </button>
             <div class="text-center mt-3">
-              <a href="/" class="text-center">Create an account</a>
+              <nuxt-link to="/register" class="text-center"
+                >Create an account</nuxt-link
+              >
             </div>
           </div>
         </div>
