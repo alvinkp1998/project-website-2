@@ -58,8 +58,34 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     // Sweet Alert Nuxt
-    "vue-sweetalert2/nuxt"
+    "vue-sweetalert2/nuxt",
+    // Nuxt Auth
+    "@nuxtjs/auth-next"
   ],
+  // router: {
+  //   middleware: ["auth"]
+  // },
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: "token",
+          global: true
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: "user"
+          // autoFetch: true
+        },
+        endpoints: {
+          login: { url: "/api/auth/login", method: "post" },
+          logout: { url: "/api/auth/logout", method: "post" },
+          user: { url: "/api/auth/user", method: "get" }
+        }
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
