@@ -12,24 +12,40 @@
       </div>
       <div class="col-md-6">
         <div class="container mt-5">
-          <label for="email">Email</label>
-          <input type="email" class="form-control mb-2" />
-          <label for="password">Password</label>
-          <input type="password" class="form-control" />
-          <div class="mt-4 ">
-            <a href="/">
-              Forgot password?
-            </a>
-            <button
-              class="submit btn btn-primary btn-block"
-              style="margin-top:5px"
-            >
-              Log in
-            </button>
-            <div class="text-center mt-3">
-              <a href="/" class="text-center">Create an account</a>
+          <form @submit.prevent="userLogin">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control mb-2"
+                v-model="login.email"
+              />
             </div>
-          </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                v-model="login.password"
+              />
+            </div>
+
+            <div class="mt-4 ">
+              <a href="/">
+                Forgot password?
+              </a>
+              <button
+                type="submit"
+                class="submit btn btn-primary btn-block"
+                style="margin-top:5px"
+              >
+                Log in
+              </button>
+              <div class="text-center mt-3">
+                <a href="/" class="text-center">Create an account</a>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -38,7 +54,27 @@
 
 <script>
 export default {
-  layout: "login"
+  layout: "login",
+  data() {
+    return {
+      login: {
+        username: "",
+        password: ""
+      }
+    };
+  },
+  methods: {
+    async userLogin() {
+      try {
+        let response = await this.$auth.loginWith("local", {
+          data: this.login
+        });
+        console.log(response);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
 };
 </script>
 
