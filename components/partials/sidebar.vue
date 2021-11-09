@@ -42,7 +42,7 @@ export default {
         {
           name: "Kelasku",
           icon: "fas fa-book-open menu-icon",
-          to: "/list-class"
+          to: "/kelasku"
         },
         {
           name: "Presensi",
